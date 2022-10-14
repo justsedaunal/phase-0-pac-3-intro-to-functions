@@ -77,3 +77,13 @@ function logTwoValues(value1 = "Value1", value2 = "Value2") {
 }
 
 logTwoValues();
+
+function Person() {
+  this.age = 0;
+
+  setInterval(() => {
+    this.age++; // `this` properly refers to the person object
+  }, 1000);
+}
+
+const p = new Person();
